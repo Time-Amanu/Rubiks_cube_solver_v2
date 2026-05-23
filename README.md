@@ -1,8 +1,7 @@
 <div align="center">
 
 <!-- Animated 2×2 Rubik's Cube (renders directly on GitHub, no image hosting needed) -->
-<img src="https://raw.githubusercontent.com/Time-Amanu/rubiks-cube-solver/main/assets/cube.svg" width="180" alt="Animated 2×2 Rubik's Cube"/>
-
+<img src="https://raw.githubusercontent.com/Time-Amanu/Rubiks_cube_solver_v2/main/assets/cube.svg" width="180" alt="Animated 2×2 Rubik's Cube"/>
 <h1>2×2 Rubik's Cube Solver</h1>
 
 <p>
