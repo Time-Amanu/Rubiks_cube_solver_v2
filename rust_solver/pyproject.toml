@@ -1,0 +1,22 @@
+[build-system]
+requires      = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name            = "cube2_solver"
+version         = "0.1.0"
+description     = "Optimal 2×2 Rubik's Cube solver — Rust/PyO3"
+requires-python = ">=3.10"
+dependencies    = [
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.29.0",
+    "pydantic>=2.7.0",
+]
+
+[tool.maturin]
+# Cargo.toml is in this same rust_solver/ directory
+manifest-path   = "Cargo.toml"
+# python-source must NOT be set here — maturin will install the .so into
+# the active venv's site-packages, making `import cube2_solver` work from
+# anywhere including the python/ directory when the venv is activated.
+features        = ["pyo3/extension-module"]
