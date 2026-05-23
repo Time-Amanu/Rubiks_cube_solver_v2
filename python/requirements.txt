@@ -1,0 +1,28 @@
+# ── Core API runtime ──────────────────────────────────────────────────────────
+fastapi>=0.111.0,<1.0.0
+uvicorn[standard]>=0.29.0,<1.0.0   # includes httptools + uvloop for production
+pydantic>=2.7.0,<3.0.0
+
+# ── Rust extension build (run once: maturin develop --release) ────────────────
+maturin>=1.5.0,<2.0.0
+
+# ── Quantum solver (optional — enables POST /quantum-solve) ───────────────────
+# Local simulated annealing (no D-Wave account needed):
+dimod>=0.12.0
+dwave-samplers>=1.0.0
+# D-Wave Leap cloud sampler (optional — needs DWAVE_API_TOKEN env var):
+# dwave-system>=1.0.0
+
+# ── ML color classifier (optional — enables rubiks_color_classifier.py) ───────
+# Install PyTorch separately from pytorch.org for your OS + CUDA version.
+# CPU-only example:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+torchvision>=0.15.0
+pillow>=10.0.0
+matplotlib>=3.7.0
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+httpx>=0.27.0                       # FastAPI TestClient transport
